@@ -21,7 +21,7 @@ body {
 .main {
     display: flex;
     justify-content: center;
-    margin-left: 10px;
+    width: 100%;
 }
 
 .container {
@@ -31,17 +31,38 @@ body {
     justify-content: center;
     width: 70%;
     min-height: 80vh;
-    /* background-color: #f7f1e3; */
     background-color: #FFFDF6;
     box-shadow: 0 1px 1px rgb(0, 0, 0, 0.2), 0 2px 2px rgb(0, 0, 0, 0.2), 0 4px 4px rgb(0, 0, 0, 0.2), 0 8px 8px rgb(0, 0, 0, 0.2);
 }
 
 .grid {
-    width: 100%;
     display: grid;
-    grid-template-areas: "info about";
-    grid-template-columns: 0.3fr 1fr;
-    margin-top: 10px;
+    grid-template-areas: "info name" "foorer footer";
+    grid-template-columns: 30% 70%;
+    width: 100%;
+}
+
+.myname-2 {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+    .myname {
+        display: none;
+    }
+    .myname-2 {
+        display: block;
+    }
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+    .codeexample_text {
+        border: solid 2px #aaa69d;
+    }
 }
 
 .info {
@@ -49,11 +70,18 @@ body {
     display: flex;
     flex-direction: column;
     grid-area: info;
-    margin-left: 10px;
+    padding: 1rem;
+}
+
+.codeexample_text {
+    overflow: auto;
+    max-width: 100%;
 }
 
 .name {
-    margin-left: 40px;
+    grid-area: name;
+    width: 100%;
+    padding: 1rem;
 }
 
 .about {
@@ -65,6 +93,7 @@ body {
 
 .myname {
     border-bottom: solid 2px #aaa69d;
+    margin: 0;
 }
 
 .photo {
@@ -79,7 +108,11 @@ body {
 
 .skills {
     border-bottom: solid 2px #aaa69d;
-    max-height: 40px;
+    padding: 0.3rem 0;
+}
+
+.skills h3 {
+    margin: 0;
 }
 
 .education {
@@ -95,7 +128,12 @@ body {
     padding: 1rem;
 }
 
-.contact_text ul {
+.contacts {
+    border-bottom: solid 2px #aaa69d;
+    padding: 0.3rem 0;
+}
+
+.contacts h3 {
     margin: 0;
 }
 
@@ -114,4 +152,5 @@ body {
     border-top: 2px solid #aaa69d;
     width: 100%;
     padding: 0 2rem;
+    grid-area: footer;
 }
