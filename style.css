@@ -1,0 +1,156 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+}
+
+body {
+    background-color: #dfe6e9;
+    font-family: "Montserrat";
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    min-height: 80vh;
+    background-color: #FFFDF6;
+    box-shadow: 0 1px 1px rgb(0, 0, 0, 0.2), 0 2px 2px rgb(0, 0, 0, 0.2), 0 4px 4px rgb(0, 0, 0, 0.2), 0 8px 8px rgb(0, 0, 0, 0.2);
+}
+
+.grid {
+    display: grid;
+    grid-template-areas: "info name" "foorer footer";
+    grid-template-columns: 30% 70%;
+    width: 100%;
+}
+
+.myname-2 {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+    .myname {
+        display: none;
+    }
+    .myname-2 {
+        display: block;
+    }
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+    .codeexample_text {
+        border: solid 2px #aaa69d;
+    }
+}
+
+.info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-area: info;
+    padding: 1rem;
+}
+
+.codeexample_text {
+    overflow: auto;
+    max-width: 100%;
+}
+
+.name {
+    grid-area: name;
+    width: 100%;
+    padding: 1rem;
+}
+
+.about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-area: about;
+}
+
+.myname {
+    border-bottom: solid 2px #aaa69d;
+    margin: 0;
+}
+
+.photo {
+    width: 100%;
+}
+
+.photo__img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+}
+
+.skills {
+    border-bottom: solid 2px #aaa69d;
+    padding: 0.3rem 0;
+}
+
+.skills h3 {
+    margin: 0;
+}
+
+.education {
+    border-bottom: solid 2px #aaa69d;
+    padding: 0.3rem 0;
+}
+
+.education h3 {
+    margin: 0;
+}
+
+.education_text {
+    padding: 1rem;
+}
+
+.contacts {
+    border-bottom: solid 2px #aaa69d;
+    padding: 0.3rem 0;
+}
+
+.contacts h3 {
+    margin: 0;
+}
+
+.stranges {
+    max-height: 10px;
+}
+
+.languages {
+    max-height: 10px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid #aaa69d;
+    width: 100%;
+    padding: 0 2rem;
+    grid-area: footer;
+}
