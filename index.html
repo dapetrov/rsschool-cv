@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
+
+    <title>CV</title>
+
+</head>
+
+<body>
+
+    <main class="main">
+        <div class="container">
+            <div class="grid">
+                <div class="info">
+                    <div class="photo"><img src="img.jpg" alt="" class="photo__img"></div>
+                    <div class="myname-2">
+                        <h2>Daniil Petrov</h2>
+
+                    </div>
+                    <div class="education">
+                        <h3>Education:</h3>
+
+                    </div>
+                    <div class="education_text">
+                        Tver State Unviversity(2019-2023)
+                    </div>
+                    <div class="skills">
+                        <h3>Skills:</h3>
+
+                    </div>
+                    <div class="skills_text">
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>C++</li>
+                            <li>Java</li>
+
+                        </ul>
+                    </div>
+                    <div class="contacts">
+                        <h3>Contacts:</h3>
+
+                    </div>
+                    <div class="contact_text">
+                        <ul>
+                            <li> <a href="https://vk.com/no_future8">VK</a></li>
+                            <li> <a href="https://github.com/dapetrov">GitHub</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="name">
+                    <div class="myname">
+                        <h2>Daniil Petrov</h2>
+                    </div>
+                    <div class="about">
+                        <h3>ABOUT ME</h3>
+                    </div>
+                    <div class="about_text">
+
+                        19y.o. Student. Keep learning HTML/CSS
+                    </div>
+                    <div class="stranges">
+                        <h3>MY STRANGHTS:</h3>
+
+                    </div>
+                    <div class="stranges_text">
+                        <ul>
+                            <li>Quick learner</li>
+                            <li>Diligence</li>
+                            <li>Team playing</li>
+                        </ul>
+
+                    </div>
+                    <div class="languages">
+                        <h3>LANGUAGES:</h3>
+
+                    </div>
+                    <div class="languages_text">
+                        <ul>
+                            <li>English A1</li>
+                        </ul>
+
+                    </div>
+                    <div class="codeexample">
+                        <h3>CODE EXAMPLE</h3>
+
+                    </div>
+                    <div class="codeexample_text">
+                        <pre><code> 
+function tickets(peopleInLine){
+    let c25 = 0
+    let c50 = 0
+    let c100 = 0
+    for (let i = 0; i &lt; peopleInLine.length; i++) {
+        if(peopleInLine[i]===25){
+            c25++
+        }
+        if(peopleInLine[i]===50){
+            if(c25>0){
+                c50++
+                c25--
+            }
+            else return 'NO'     
+        }
+        if(peopleInLine[i]===100){
+            if(c25>0&&c50>0){
+                c25--
+                c50--
+                c100++
+            }
+            else if(c25>=3){
+                c25-=3
+                c100++
+            }
+                                      
+            else return 'NO'
+        }
+    }
+    return 'YES'
+}
+
+                    </code></pre>
+                    </div>
+                </div>
+
+            </div>
+            <footer class="footer">
+                <h4> <a href="https://github.com/dapetrov">GitHub</a></h4>
+                <h4>Created in 2021</h4>
+            </footer>
+        </div>
+
+    </main>
+
+</body>
+
+
+</html>
